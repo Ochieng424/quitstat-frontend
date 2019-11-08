@@ -6,11 +6,11 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="nav-item active">
+                <li class="nav-item">
                     <nuxt-link class="nav-link" to="/">Home</nuxt-link>
                 </li>
                 <li class="nav-item">
-                    <nuxt-link class="nav-link" to="">About</nuxt-link>
+                    <nuxt-link class="nav-link" to="/about">About</nuxt-link>
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto">
