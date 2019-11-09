@@ -35,13 +35,13 @@
             }
         },
         methods: {
-            // async submit() {
-            //     await this.$auth.loginWith("local", {
-            //         data: this.form
-            //     })
-            //
-            //     this.$router.push('/');
-            // }
+            async submit() {
+                await this.$auth.loginWith("local", {
+                    data: this.form
+                })
+
+                this.$router.push('/');
+            }
         }
     }
 </script>

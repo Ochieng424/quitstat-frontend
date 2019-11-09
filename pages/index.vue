@@ -3,12 +3,14 @@
         <div class="row align-items-center" style="padding-top: 80px">
 
             <div class="col-lg-6">
-                <h1>Your Support Center</h1>
-                <p class="lead mt-5 mb-8">Thinking about having an online documentation or support system for your
-                    startup? TheDocs have everythings you need to develop your own help center.</p>
+                <h1>QuitStat</h1>
+                <p class="lead mt-5 mb-8">Thinking about having to keep track of whatever you Quit?? The amount of time
+                    you have done without it and the total amount of money saved from that?? You do not have to
+                    worry anymore.</p>
                 <p>
                     <nuxt-link to="/register">
-                        <button type="button" class="btn btn-lg btn-info" style="border-radius: 50px">Get Started</button>
+                        <button type="button" class="btn btn-lg btn-info" style="border-radius: 50px">Get Started
+                        </button>
                     </nuxt-link>
                 </p>
             </div>
