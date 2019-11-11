@@ -9,12 +9,12 @@
                         <label>Email address</label>
                         <input v-model.trim="form.email" type="email" class="form-control" placeholder="Enter email"
                                autofocus>
-                        <small class="form-text text-danger">Error here.</small>
+                        <small class="form-text text-danger" v-if="errors.email">{{errors.email[0]}}</small>
                     </div>
                     <div class="form-group">
                         <label>Password</label>
                         <input v-model.trim="form.password" type="password" class="form-control" placeholder="Password">
-                        <small class="form-text text-danger">Error here.</small>
+                        <small class="form-text text-danger" v-if="errors.password">{{errors.password[0]}}</small>
                     </div>
                     <button type="submit" class="btn btn-primary" style="width: 100%;">Login</button>
                 </form>
