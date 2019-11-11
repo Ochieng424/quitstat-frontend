@@ -15,10 +15,21 @@
             </ul>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <nuxt-link class="nav-link" to="/login">Log In</nuxt-link>
+                    <nuxt-link class="nav-link" to="/login" v-if="!authenticated">Log In</nuxt-link>
                 </li>
                 <li class="nav-item">
-                    <nuxt-link class="nav-link" to="/register">Register</nuxt-link>
+                    <nuxt-link class="nav-link" to="/register" v-if="!authenticated">Register</nuxt-link>
+                </li>
+                <li class="nav-item dropdown mr-5" v-if="authenticated">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {{user.name}}
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Quit List</a>
+                        <a class="dropdown-item" href="#">Profile</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#" @click.prevent="logout()">Logout</a>
+                    </div>
                 </li>
             </ul>
         </div>
@@ -27,7 +38,12 @@
 
 <script>
     export default {
-        name: "Nav"
+        name: "Nav",
+        methods:{
+            logout(){
+                this.$auth.logout();
+            }
+        }
     }
 </script>
 

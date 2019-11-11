@@ -8,7 +8,7 @@
                     you have done without it and the total amount of money saved from that?? You do not have to
                     worry anymore.</p>
                 <p>
-                    <nuxt-link to="/register">
+                    <nuxt-link to="/register" v-if="!authenticated">
                         <button type="button" class="btn btn-lg btn-info" style="border-radius: 50px">Get Started
                         </button>
                     </nuxt-link>
