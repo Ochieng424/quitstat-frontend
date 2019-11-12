@@ -26,6 +26,7 @@
 <script>
     export default {
         name: "login",
+        middleware: ["guest"],
         data() {
             return {
                 form: {
@@ -38,9 +39,11 @@
             async submit() {
                 await this.$auth.loginWith("local", {
                     data: this.form
-                })
+                });
 
-                this.$router.push('/');
+                this.$router.push({
+                    path: this.$route.query.redirect || "/statlist"
+                });
             }
         }
     }

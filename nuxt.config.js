@@ -40,6 +40,12 @@ export default {
     css: [
         "@/assets/styles/main.css"
     ],
+
+    router:{
+        middleware:[
+            "clearValidationErrors"
+        ]
+    },
     /*
     ** Plugins to load before mounting the App
     */
@@ -65,7 +71,7 @@ export default {
     ** See https://axios.nuxtjs.org/options
     */
     axios: {
-        baseURL: "http://3aa0baf9.ngrok.io/api"
+        baseURL: "http://471410b3.ngrok.io/api"
     },
 
     auth: {
